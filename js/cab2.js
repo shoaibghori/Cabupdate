@@ -25,7 +25,7 @@ $(document).ready(function () {
         var curStep = $(this).closest(".setup-content"),
             curStepBtn = curStep.attr("id"),
             nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url'],select,input[type='tel'],input[type='time'],input[type='email']"),
+            curInputs = curStep.find("input[type='text'],input[type='url'],select,input[type='tel'],input[type='time'],input[type='email'],input[type='date']"),
             isValid = true;
 
         $(".form-group").removeClass("has-error");
@@ -38,7 +38,6 @@ $(document).ready(function () {
         if (isValid)
             nextStepWizard.removeAttr('disabled').trigger('click');
     });
-
     allPrevBtn.click(function(){
 
         var curStep = $(this).closest(".setup-content"),
