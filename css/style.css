@@ -97,8 +97,10 @@ body{
 .btn-primary{
      border: 1px solid #0d377a;
     background: #0d377a;
+    color: #fff;
 }
 .btn-primary:hover{
+    color: #fff;
      border: 1px solid #3a6ec0;
     background: #3a6ec0;
 }
