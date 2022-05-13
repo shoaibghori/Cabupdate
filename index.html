@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel='stylesheet' href='css/dsgov.css'>
+    <!-- <link rel='stylesheet' href='css/dsgov.css'> -->
     <link rel='stylesheet' href='css/all.min.css'>
     <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="css/style.css" rel="stylesheet">
@@ -66,6 +66,10 @@
                             <option>Madinah Airport</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label class="control-label" for="date">Pickup Date</label>
+                        <input type="date" class="form-control" id="date" required placeholder="Select Date">
+                    </div>
                     <button class="btn btn-primary nextBtn mt-2 btn-lg float-right" type="button">Next</button>
                 </div>
             </div>
@@ -75,7 +79,8 @@
                     <div class="wizard-panel-content text-center py-4">
                         <h2 class="sel-veh">Select Vehicle</h2>
                         <div class="row">
-                            <div class="col-lg-6 form-group text-left">
+                            <div class="col-lg-6 form-group text-left showClass" id="showClass">
+                                <div class="">
                                 <label class="mb-0">
                                     <img src="images/camry.png" height="80" width="150">
                                     <br>
@@ -86,7 +91,9 @@
                                 <span style="font-weight: bold; font-size: 20px;">Fare : 350
                                 </span>
                             </div>
-                            <div class="col-lg-6 form-group text-left">
+                            </div>
+                            <div class="col-lg-6 form-group text-left showClass" id="showClass1">
+                                <div class="">
                                 <label class="mb-0">
                                     <img src="images/fort.png" height="80" width="150">
                                     <br>
@@ -97,7 +104,9 @@
                                 <span style="font-weight: bold; font-size: 20px;">Fare : 370
                                 </span>
                             </div>
-                            <div class="col-lg-6 form-group text-left">
+                            </div>
+                            <div class="col-lg-6 form-group text-left showClass">
+                                <div class="">
                                 <label class="mb-0">
                                     <img src="images/gmc.png" height="80" width="150">
                                     <br>
@@ -109,7 +118,9 @@
                                 <span style="font-weight: bold; font-size: 20px;">Fare : 770
                                 </span>
                             </div>
-                            <div class="col-lg-6 form-group text-left">
+                        </div>
+                            <div class="col-lg-6 form-group text-left showClass">
+                                <div class="">
                                 <label class="mb-0">
                                     <img src="images/hiroof.png" height="80" width="150">
                                     <br>
@@ -121,6 +132,7 @@
                                 <span style="font-weight: bold; font-size: 20px;">Fare : 500
                                 </span>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <!-- step 2 -->
@@ -144,16 +156,15 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="tel" class="control-label">Contact Number</label>
-                                        <input type="tel" value="" class="form-control" id="tel"
+                                        <input type="tel" value="+1 " class="form-control" id="tel"
                                             aria-describedby="telnum" required>
                                         <small id="telnum" class="form-text">example: +11 123455678</small>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="telwp" class="control-label">WhatsApp No</label>
-                                        <input type="tel" value="" class="form-control" id="telwp" required>
+                                        <input type="tel" value="+1" class="form-control" id="telwp" required>
                                         <small>
                                             <div class="form-group form-check">
                                                 <input type="checkbox" class="form-check-input" id="wp-num" required>
@@ -194,12 +205,12 @@
                     </label>
                     <input type="text" id="mainCaptcha" disabled="disabled"
                         class="form-control d-inline-block w-25 float-left mr-3">
-                    <button type="button" class="br-button primary wizard-btn-prev float-left mr-3 mb-3" id="refresh"
+                    <button type="button" class="btn btn-primary  wizard-btn-prev float-left mr-3 mb-3" id="refresh"
                         onclick="Captcha();">
                         <i class=" fas fa-sync" title="Refresh"></i>
                     </button>
                     <input type="text" id="txtInput" class="form-control mb-3 w-25  mr-3 float-left">
-                    <button type="button" class="br-button primary  wizard-btn-next mb-3 float-left" id="Button1"
+                    <button type="button" class="btn btn-primary   wizard-btn-next mb-3 float-left" id="Button1"
                         onclick="ValidCaptcha();">
                         Check
                     </button>
@@ -232,6 +243,25 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cab2.js"></script>
     <script src='js/captcha.js'></script>
+
+<script>
+
+
+
+
+
+$(document).ready(function() {
+$(".showClass").click(function () {
+    $(".showClass").removeClass("addbg");
+    // $(".tab").addClass("addbg"); // instead of this do the below 
+    $(this).addClass("addbg");   
+});
+});
+
+
+
+
+</script>
 
 
 

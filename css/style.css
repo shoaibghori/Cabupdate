@@ -76,7 +76,7 @@ body{
     padding: 6px 28px;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid #007bff;
+    border: 1px solid #0d377a;
     background: #0d377a;
 }
 
@@ -92,10 +92,23 @@ body{
 }
 .nextBtn:hover{
    background: #3a6ec0;
+
+}
+.btn-primary{
+     border: 1px solid #0d377a;
+    background: #0d377a;
+}
+.btn-primary:hover{
+     border: 1px solid #3a6ec0;
+    background: #3a6ec0;
 }
 .comp{
     border-radius: 50px;
     padding: 6px 28px;
     font-size: 16px;
     font-weight: bold;
+}
+
+.addbg{
+    background-color: #f0f0f0;
 }
